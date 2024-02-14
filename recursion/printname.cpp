@@ -2,21 +2,25 @@
 using namespace std;
 int ctr =0;
 
-void test(){
-	if(ctr==2){
+void test(int times){
+	if(ctr==times){
 		return;
 	}
 	else{
-		cout<<"1\n";
+		cout<<"name\n";
 		ctr++;
-		test();
+		test(times);
 	}
 	return ;
 }
 
 int main(){
+	cout<<"enter no: \n";
 
-	test();
+	int x;cin>>x;
+
+	test(x);
+
 
 	return 0;
 }
