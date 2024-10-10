@@ -1,13 +1,17 @@
-#include <bits/stdc++.h>
-#include <unistd.h>
-using namespace std;
+#include <cstdint>
+#include <iostream>
 
-// void stress_fn() {
-//     std::cout << "Stress test result: 42" << std::endl;
-// }
+namespace Options {
+enum Color : std::int32_t {
+  red,
+  pink = 5,
+  green,
 
+};
+}
 int main() {
-  vector<pair<int, int>> v;
-  v.push_back(make_pair(3, 5));
-  cout << v[0].first;
+  Options::Color shirt{static_cast<Options::Color>(5)};
+  if (!0) {
+    std::cout << "your shirt is " << shirt;
+  };
 }

@@ -4,13 +4,11 @@ using namespace std;
 int fib(int n) {
   if (n <= 1)
     return n;
-  int last = fib(n - 1);
-  int slast = fib(n - 2);
-  return last + slast;
+  return (fib(n - 1) + fib(n - 2));
 }
-
-int main() {
-  int n;
-  cin >> n;
-  cout << fib(n);
+int main(int argc, char *argv[]) {
+  int n = 100;
+  const int ans = fib(n);
+  cout << ans;
+  return 0;
 }
